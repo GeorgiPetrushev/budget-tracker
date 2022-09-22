@@ -4,7 +4,7 @@ const AppStyle = styled.div`
 margin: 1rem;
 font-size: 1.2rem;
 
-.container-tracker{
+.container-tracker-bars{
     display: grid;
     grid-gap: 1rem;
 }

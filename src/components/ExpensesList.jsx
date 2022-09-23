@@ -1,34 +1,38 @@
+import Expense from "./Expense";
 
+const ExpensesList = () => {
+  const expense = [
+    {
+      id: "123",
+      type: "shopping",
+      cost: "40",
+    },
+    {
+      id: "124",
+      type: "car",
+      cost: "20",
+    },
+    {
+      id: "125",
+      type: "mortgage",
+      cost: "1220",
+    },
+    {
+      id: "126",
+      type: "insurance",
+      cost: "130",
+    },
+  ];
 
-const ExpensesList = () =>{
+  return (
+    <div className="expense-list">
+      {expense.map((expense) => {
+        return (
+            <Expense key={expense.id} type={expense.type} cost={expense.cost} />
+        );
+      })}
+    </div>
+  );
+};
 
-    const expense = [
-        {
-            id:'123',
-            type: "shopping",
-            const: "40"
-        },
-        {
-            id:'124',
-            type: "car",
-            const: "20"
-        }
-    ];
-
-    return (
-        <div>
-            {expense.map(
-                (arr) => (
-                    <div id={arr.id}>
-                    <div>{arr.id}</div>
-                    <div>{arr.const}</div>
-                    </div>
-            )
-
-            )}
-
-        </div>
-    )
-}
-
-export default ExpensesList
+export default ExpensesList;

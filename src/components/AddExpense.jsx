@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const AddExpense = () => {
   const [type, setType] = useState("");
-  const [cost, setCost] = useState();
+  const [cost, setCost] = useState("");
 
   const { dispatch } = useContext(AppContext);
 
@@ -15,10 +15,11 @@ const AddExpense = () => {
       type: type,
       cost: parseInt(cost),
     };
-    dispatch({
-      type: "ADD_EXPENSE",
-      payload: addExpense,
-    });
+    console.log(dispatch);
+    dispatch(
+      {type: "ADD_EXPENSE",
+      payload: addExpense,}
+    );
     setType("");
     setCost("");
   };

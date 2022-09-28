@@ -1,8 +1,15 @@
-import React from "react";  
+import { useContext } from "react"
+import { AppContext } from "./context/AppContext"
+
 
 const Remaining = () =>{
-    return <div className="remaining box-tracker">
-        Remaining: 1200$
+
+    const {budget , expense} =useContext(AppContext);
+    let result = expense.reduce( (sum , arr)=> sum + arr.cost,0);
+    
+
+    return <div className="remaining box-tracker" style={(budget < result)?{backgroundColor: '#fd5c63'}: null}>
+        Remaining: {budget-result} $
     </div>
 }
 

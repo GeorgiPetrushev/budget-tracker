@@ -10,7 +10,7 @@ const ExpensesList = () => {
     <div className="expense-list">
       {expense.map((expense) => {
         return (
-            <Expense key={expense.id} type={expense.type} cost={expense.cost} />
+            <Expense key={expense.id} id={expense.id} type={expense.type} cost={expense.cost} />
         );
       })}
     </div>

@@ -1,12 +1,19 @@
 import { createContext, useReducer } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const AppReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_EXPENSE":
+    case 'ADD_EXPENSE':
       return {
         ...state,
         expenses: [...state.expenses, action.payload],
       };
+      case 'DELETE_EXPENSE':
+        return {
+          ...state,
+          expenses: state.expenses.filter( (arr)=>arr.id !== action.payload ),
+        };
+      
 
     default:
       return state;
@@ -17,24 +24,24 @@ const initialState = {
   budget: 2000,
   expenses: [
     {
-      id: "123",
+      id: uuidv4(),
       type: "shopping",
-      cost: "40",
+      cost: 40,
     },
     {
-      id: "124",
+      id: uuidv4(),
       type: "car",
-      cost: "20",
+      cost: 20,
     },
     {
-      id: "125",
+      id: uuidv4(),
       type: "mortgage",
-      cost: "1220",
+      cost: 1220,
     },
     {
-      id: "126",
+      id: uuidv4(),
       type: "insurance",
-      cost: "130",
+      cost: 130,
     },
   ],
 };

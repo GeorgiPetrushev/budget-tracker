@@ -6,7 +6,7 @@ const Budget = () =>{
 
     const { budget } = useContext(AppContext); 
 
-    return <div className="budget box-tracker"> {budget} $</div>
+    return <div className="budget box-tracker">Budget: {budget} $</div>
 }
 
 export default Budget;

@@ -1,28 +1,10 @@
 import Expense from "./Expense";
+import { useContext } from "react";
+import { AppContext } from "./context/AppContext";
 
 const ExpensesList = () => {
-  const expense = [
-    {
-      id: "123",
-      type: "shopping",
-      cost: "40",
-    },
-    {
-      id: "124",
-      type: "car",
-      cost: "20",
-    },
-    {
-      id: "125",
-      type: "mortgage",
-      cost: "1220",
-    },
-    {
-      id: "126",
-      type: "insurance",
-      cost: "130",
-    },
-  ];
+
+  const {expense} = useContext(AppContext);
 
   return (
     <div className="expense-list">

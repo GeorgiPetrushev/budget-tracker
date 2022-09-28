@@ -1,7 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+import { AppContext } from "./context/AppContext";
 
 const Budget = () =>{
-    return <div className="budget box-tracker"> Budget: 6000$</div>
+
+    const { budget } = useContext(AppContext); 
+
+    return <div className="budget box-tracker"> {budget} $</div>
 }
 
 export default Budget;

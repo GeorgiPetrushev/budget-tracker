@@ -57,7 +57,8 @@ const AppStyle = styled.div`
     }
     .icon {
       font-size: 2rem;
-      transition: 0.3s;
+      transition: 0.25s;
+      cursor: pointer;
     }
     .icon:hover {
       color: #ef3038;

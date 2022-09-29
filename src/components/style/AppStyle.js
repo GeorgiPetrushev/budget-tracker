@@ -27,7 +27,7 @@ const AppStyle = styled.div`
     align-items: center;
   }
   .budget-right{
-    background-color: red;
+    
   }
   .remaining {
     background-color: #abd699;
@@ -43,6 +43,8 @@ const AppStyle = styled.div`
   //Budget Button
   .budget-button{
     transition: 400ms;
+    margin-left: 5px;
+    border-radius: 0.2rem;
     
   }
   .button1 {

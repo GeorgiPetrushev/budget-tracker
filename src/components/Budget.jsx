@@ -34,21 +34,30 @@ const Budget = () => {
     <div>
       {edit ? (
         <div className="budget box-tracker">
-          <input
-            value={inputValue}
-            onChange={changeBudgetValue}
-            type="number"
-            name="budge"
-            min="1"
-            max="15000"
-          ></input>
-          <button onClick={editBudget}>Save</button>
+          <div className="budget-left">
+            {" "}
+            <input
+            className="input-budget"
+              value={inputValue}
+              onChange={changeBudgetValue}
+              type="number"
+              name="budge"
+              min="1"
+              max="150000"
+            ></input>
+          </div>
+          <div className="budget-right">
+            <button onClick={editBudget} className=" budget-button button2">Save</button>
+          </div>
         </div>
       ) : (
         <div className="budget box-tracker">
-          Budget: {budget} $ <button onClick={increaseBudget}>+100</button>
-          <button onClick={decreaseBudget}>-100</button>
-          <button onClick={editBudget}> Edit</button>
+          <div className="budget-left"> Budget: {budget} $ </div>
+          <div className="budget-right">
+            <button className="budget-button button1" onClick={increaseBudget}>+100</button>
+            <button className="budget-button button3" onClick={decreaseBudget}>-100</button>
+            <button className="budget-button button2" onClick={editBudget}> Edit</button>
+          </div>
         </div>
       )}
     </div>

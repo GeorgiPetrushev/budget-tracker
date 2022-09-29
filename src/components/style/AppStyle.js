@@ -1,20 +1,19 @@
 import styled from "styled-components";
 
 const AppStyle = styled.div`
-  
   margin: auto;
   padding: 1rem;
   max-width: 860px;
   font-size: 1.1rem;
 
-  // Budget tracker 
+  // Budget tracker
 
   .container-tracker-bars {
     display: grid;
     grid-gap: 1rem;
-    @media only screen and (min-width: 900px){
-        font-size: 1.2rem;
-        grid-template-columns: repeat(3,1fr)
+    @media only screen and (min-width: 900px) {
+      font-size: 1.2rem;
+      grid-template-columns: 1.4fr 1fr 1fr;
     }
   }
   .box-tracker {
@@ -23,6 +22,12 @@ const AppStyle = styled.div`
   }
   .budget {
     background-color: #bebebe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .budget-right{
+    background-color: red;
   }
   .remaining {
     background-color: #abd699;
@@ -30,6 +35,48 @@ const AppStyle = styled.div`
   .spent {
     background-color: #ffe26a;
   }
+  //Remove Arrows Input
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+  }
+  //Budget Button
+  .budget-button{
+    transition: 400ms;
+    
+  }
+  .button1 {
+  background-color: white; 
+  color: black; 
+  border: 1px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 1px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 1px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
 
   // Expense
 
@@ -66,19 +113,18 @@ const AppStyle = styled.div`
   }
 
   //Add New Expense
-  .form{
+  .form {
     display: grid;
     grid-gap: 1rem;
   }
-  .input{
+  .input {
     font-size: 1.5rem;
     height: 2.5rem;
     margin-bottom: 0.5rem;
   }
-  .submit-button{
+  .submit-button {
     height: 3rem;
   }
-
 `;
 
 export default AppStyle;

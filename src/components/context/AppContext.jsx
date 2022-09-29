@@ -3,17 +3,31 @@ import { v4 as uuidv4 } from "uuid";
 
 const AppReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_EXPENSE':
+    case "ADD_EXPENSE":
       return {
         ...state,
         expenses: [...state.expenses, action.payload],
       };
-      case 'DELETE_EXPENSE':
-        return {
-          ...state,
-          expenses: state.expenses.filter( (arr)=>arr.id !== action.payload ),
-        };
-      
+    case "DELETE_EXPENSE":
+      return {
+        ...state,
+        expenses: state.expenses.filter((arr) => arr.id !== action.payload),
+      };
+    case "ADD_100_TO_BUDGET":
+      return {
+        ...state,
+        budget: state.budget + action.payload,
+      };
+    case "REMOVE_100_TO_BUDGET":
+      return {
+        ...state,
+        budget: state.budget - action.payload,
+      };
+    case "CHANGE_BUDGE":
+      return {
+        ...state,
+        budget:  action.payload,
+      };
 
     default:
       return state;

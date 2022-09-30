@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 const AppReducer = (state, action) => {
   switch (action.type) {
     case "ADD_EXPENSE":
-      return {
+      return { 
         ...state,
         expenses: [...state.expenses, action.payload],
       };
@@ -16,17 +16,17 @@ const AppReducer = (state, action) => {
     case "ADD_100_TO_BUDGET":
       return {
         ...state,
-        budget: state.budget + action.payload,
+        budget: state.budget  + Number(action.payload),
       };
     case "REMOVE_100_TO_BUDGET":
       return {
         ...state,
-        budget: state.budget - action.payload,
+        budget: state.budget - Number(action.payload),
       };
     case "CHANGE_BUDGE":
       return {
         ...state,
-        budget:  action.payload,
+        budget:  Number(action.payload),
       };
 
     default:

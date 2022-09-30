@@ -27,7 +27,10 @@ const AppStyle = styled.div`
     align-items: center;
   }
   .budget-right{
-    
+    display: flex;
+    margin: 0;
+    padding:0;
+    color: white;
   }
   .remaining {
     background-color: #abd699;
@@ -45,42 +48,54 @@ const AppStyle = styled.div`
     transition: 400ms;
     margin-left: 5px;
     border-radius: 0.2rem;
+    padding: 0.4rem 0.3rem;
     
   }
   .button1 {
-  background-color: white; 
+  background-color: #8fd400; 
   color: black; 
-  border: 1px solid #4CAF50;
+  border: none;
 }
 
 .button1:hover {
-  background-color: #4CAF50;
+  background-color: #8bbe1b;
   color: white;
 }
 
 .button2 {
-  background-color: white; 
+  background-color: #007fbf; 
   color: black; 
-  border: 1px solid #008CBA;
+  border: none;
 }
 
 .button2:hover {
-  background-color: #008CBA;
+  background-color: #0077be;
   color: white;
 }
 
 .button3 {
-  background-color: white; 
+  background-color: #fd0e35; 
   color: black; 
-  border: 1px solid #f44336;
+  border: none;
 }
 
 .button3:hover {
-  background-color: #f44336;
+  background-color: #ed1c24;
   color: white;
 }
 
   // Expense
+  .input-search{
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.3rem;
+    border: none;
+  }
+  .input-search:focus{
+    border: none;
+    outline: none;
+  }
 
   .expense-list {
     border-radius: 0.5rem;

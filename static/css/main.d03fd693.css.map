@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.d03fd693.css","mappings":"8EAEA,KAGE,8BAAgC,CAFhC,QAAS,CACT,SAGF","sources":["index.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: 'Noto Serif', serif;\n  \n}\n"],"names":[],"sourceRoot":""}
